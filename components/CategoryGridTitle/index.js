@@ -1,7 +1,10 @@
 import React from 'react';
 import { Pressable, Text, View, StyleSheet, Platform } from 'react-native';
+//import { useNavigation } from '@react-navigation/native';
 
 const CategoryGridTitle = ({ title, color, onPress }) => {
+	//const navigation = useNavigation();
+
 	return (
 		<View style={styles.gridItem}>
 			<Pressable android_ripple={{ color: '#ccc' }}
