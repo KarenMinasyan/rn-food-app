@@ -37,6 +37,7 @@ export default function App() {
 					<Stack.Screen
 						name='MealDetail'
 						component={MealDetailScreen}
+						// options={{ headerRight: () => <Button title='Tap me!' onPress={} /> }}
 					/>
 				</Stack.Navigator>
 			</NavigationContainer>
