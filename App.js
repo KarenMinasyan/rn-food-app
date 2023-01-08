@@ -3,14 +3,17 @@ import { StyleSheet } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { NavigationContainer } from '@react-navigation/native';
 import { StackNavigator } from './navigations/StackNavigator';
+import FavoritesContextProvider from './store/context/favorites-context';
 
 const App = () => {
 	return (
 		<>
 			<StatusBar style='light'/>
-			<NavigationContainer>
-				<StackNavigator />
-			</NavigationContainer>
+			<FavoritesContextProvider>
+				<NavigationContainer>
+					<StackNavigator />
+				</NavigationContainer>
+			</FavoritesContextProvider>
 		</>
 	);
 }
