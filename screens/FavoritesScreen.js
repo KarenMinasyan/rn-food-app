@@ -1,13 +1,16 @@
 import React, { useContext } from 'react';
 import { Button, StyleSheet, Text, View } from 'react-native';
 import MealsList from '../components/MealsList/MealsList';
-import { FavoritesContext } from '../store/context/favorites-context';
+//import { FavoritesContext } from '../store/context/favorites-context';
 import { MEALS } from '../data/dummy-data';
+import { useSelector } from 'react-redux';
 
 const FavoritesScreen = ({ navigation }) => {
-	const favoriteMealsCtx = useContext(FavoritesContext);
+	// const favoriteMealsCtx = useContext(FavoritesContext);
+	const { ids } = useSelector(state => state.favorite);
 
-	const favoriteMeals = MEALS.filter(meal => favoriteMealsCtx.ids.includes(meal.id));
+	//const favoriteMeals = MEALS.filter(meal => favoriteMealsCtx.ids.includes(meal.id));
+	const favoriteMeals = MEALS.filter(meal => ids.includes(meal.id));
 
 	const openDrawerHandler = () => {
 		navigation.toggleDrawer();
