@@ -35,17 +35,17 @@ const DrawerNavigator = () => {
 				component={BottomTabNavigator}
 				options={{
 					title: 'All Categories',
-					drawerIcon: ({color, size}) => (
-						<Ionicons name='list' color={color} size={size} />
+					drawerIcon: ({ color, size }) => (
+						<Ionicons name='list' color={color} size={size}/>
 					)
-			}}
+				}}
 			/>
 			<Drawer.Screen
 				name='Favorites'
 				component={FavoritesScreen}
 				options={{
-					drawerIcon: ({color, size}) => (
-						<Ionicons name='star' color={color} size={size} />
+					drawerIcon: ({ color, size }) => (
+						<Ionicons name='star' color={color} size={size}/>
 					)
 				}}
 			/>
@@ -53,17 +53,18 @@ const DrawerNavigator = () => {
 	)
 }
 
-const BottomTabNavigator  = () => {
+const BottomTabNavigator = () => {
 	return (
 		<BottomTab.Navigator
 			screenOptions={{
 				headerStyle: { backgroundColor: '#3c0a6b' },
 				headerTintColor: 'white',
-				sceneContainerStyle: { backgroundColor: 'red' },
 				tabsContentSize: { backgroundColor: '#351401' },
-				tabBarInactiveTintColor: '#368dff',
-				tabBarActiveTintColor: '#f54242',
+				tabBarInactiveTintColor: 'white',
+				tabBarActiveTintColor: '#e4baa1',
+				tabBarStyle: { backgroundColor: '#351401' },
 			}}
+			sceneContainerStyle ={{ backgroundColor: '#3f2f25' }}
 		>
 			<BottomTab.Screen
 				name='Categories'
@@ -71,16 +72,16 @@ const BottomTabNavigator  = () => {
 				options={{
 					headerShown: false,
 					tabBarIcon: ({ color, size }) => (
-						<Ionicons name='albums' color={color} size={size} />
+						<Ionicons name='albums' color={color} size={size}/>
 					)
-			}}
+				}}
 			/>
 			<BottomTab.Screen
 				name='Home'
 				component={WelcomeScreen}
 				options={{
 					tabBarIcon: ({ color, size }) => (
-						<Ionicons name='home' color={color} size={size} />
+						<Ionicons name='home' color={color} size={size}/>
 					)
 				}}
 			/>
@@ -89,7 +90,7 @@ const BottomTabNavigator  = () => {
 				component={UserScreen}
 				options={{
 					tabBarIcon: ({ color, size }) => (
-						<Ionicons name='person' color={color} size={size} />
+						<Ionicons name='person' color={color} size={size}/>
 					)
 				}}
 			/>
