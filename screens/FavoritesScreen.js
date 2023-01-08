@@ -1,9 +1,15 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { Button, Text, View } from 'react-native';
 
-const FavoritesScreen = () => {
+const FavoritesScreen = ({ navigation }) => {
+	const openDrawerHandler = () => {
+		navigation.toggleDrawer();
+	};
 	return (
+		<View>
 			<Text>the favorites screen</Text>
+			<Button title='open drawer' onPress={openDrawerHandler} />
+		</View>
 	);
 };
 
