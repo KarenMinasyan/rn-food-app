@@ -1,16 +1,11 @@
 import React from 'react';
-import { Button, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
 
-const UserScreen = ({ navigation }) => {
-
-	const openDrawerHandler = () => {
-			navigation.toggleDrawer();
-	};
+const UserScreen = () => {
 
 	return (
 		<View>
 			<Text>user screen</Text>
-			<Button title='open drawer' onPress={openDrawerHandler} />
 		</View>
 	);
 };
